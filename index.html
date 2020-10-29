@@ -46,7 +46,7 @@
 
     <nav
       class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-      id="ftco-navbar"
+      id="ftco-navbar" 
     >
       <div class="container">
         <a class="navbar-brand" href="index.html">I<span>Pyramid</span></a>
@@ -65,7 +65,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="index.html" class="nav-link">Home</a>
+              <a href="#index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="#about-us" id="" class="nav-link">About Us</a>
@@ -77,15 +77,15 @@
               <a href="#contact-us" class="nav-link">Contact us</a>
             </li>
             <li class="nav-item cta">
-              <a href="#" class="nav-link">Free Consultation</a>
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#free-consultation">Free Consultation</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- END nav -->
-
-    <div
+<section id="index">
+      <div
       class="hero-wrap js-fullheight"
       style="background-image: url('images/bg_1.jpg')"
       data-stellar-background-ratio="0.5"
@@ -200,6 +200,8 @@
         </div>
       </div>
     </section>
+  </section>
+
 
     <section class="ftco-counter img" id="section-counter">
       <div class="container">
@@ -345,7 +347,7 @@
               </div>
               <div class="text text-center">
                 <h3>
-                  <a href="project.html">Roofs</a>
+                  <a href="./coming soon/project.html">Roofs</a>
                 </h3>
               </div>
               <a
@@ -362,7 +364,9 @@
                 <img src="images/IMG-20201012-WA0008.jpg" class="img-fluid" />
               </div>
               <div class="text text-center">
-                <h3><a href="project.html">School Assist</a></h3>
+                <h3>
+                  <a href="./coming soon/project.html">School Assist</a>
+                </h3>
               </div>
               <a
                 href="images/IMG-20201012-WA0010.jpg"
@@ -379,7 +383,7 @@
               </div>
               <div class="text text-center">
                 <h3>
-                  <a href="project.html">Water Guaun</a>
+                  <a href="./coming soon/project.html">Water Guaun</a>
                 </h3>
               </div>
               <a
@@ -397,7 +401,7 @@
               </div>
               <div class="text text-center">
                 <h3>
-                  <a href="project.html">ID Card Identification System</a>
+                  <a href="./coming soon/project.html">ID Card Identification System</a>
                 </h3>
               </div>
               <a
@@ -873,10 +877,9 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-footer-logo">IT<span>solution</span></h2>
+              <h2 class="ftco-footer-logo">I<span>Pyramid</span></h2>
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
+               Providing IT solutions to your expectations. 
               </p>
               <ul class="ftco-footer-social list-unstyled mt-2">
                 <li class="ftco-animate">
@@ -895,8 +898,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Explore</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Home</a></li>
-                <li><a href="#" class="py-2 d-block">Services</a></li>
+                <li><a href="#index" class="py-2 d-block">Home</a></li>
+                <li><a href="#our-services" class="py-2 d-block">Services</a></li>
               </ul>
             </div>
           </div>
@@ -904,9 +907,9 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Know More</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">About Us</a></li>
+                <li><a href="#about-us" class="py-2 d-block">About Us</a></li>
 
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                <li><a href="#contact-us" class="py-2 d-block">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -977,6 +980,50 @@
         />
       </svg>
     </div>
+
+    
+	<!-- Free Consultation Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#free-consultation">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <form>
+  <div class="modal fade" id="free-consultation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Free Consultaion</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Drop your contact and brief descrition of your problem and we would get back to you.
+         
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="details">Description of Problem</label>
+              <textarea class="form-control" name="details" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
