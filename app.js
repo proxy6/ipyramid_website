@@ -10,7 +10,6 @@ const ejs = require('ejs');
 const methodOverride = require('method-override');
 const Post = require('./models/post');
 const ejsEngine = require('ejs-mate');
-require('./connection')
 require('dotenv').config();
 
 
@@ -43,6 +42,24 @@ db.once('open', function () {
     console.log('db connected')
 });
  */
+const mongoose = require('mongoose');
+mongoose
+  .connect(/* 'mongodb://localhost:27017/student-mgmt-sys' || */ process.env.DBURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    console.log("Database connected");
+    if (process.send) {
+      process.send("ready");
+    }
+  })
+  .catch((e) => {
+    console.error("An error occured while trying to connect with the database");
+    process.exit(0);
+  });
 
 app.post('/contact', async (req, res) => {
     const output = `
