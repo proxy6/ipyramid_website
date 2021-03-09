@@ -244,7 +244,7 @@ app.get('/', (req, res) => {
 app.get('/coming-soon', (req, res)=>{
     res.render('coming soon/project.ejs')
 })
-const port = 3500 || process.env.PORT;
-app.listen(port, () => {
-    console.log('server started');
-})
+const port = process.env.PORT || 3500;
+app.listen(port, () =>
+  console.log(`The server is running at http://localhost:${port}`)
+);
