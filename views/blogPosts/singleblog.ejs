@@ -1,0 +1,23 @@
+<%- layout('layout/boilerplate') -%>
+<div class="card mb-3"">
+    <div class="row g-0">
+    <div class="col-md-4">
+    <img src="<%= post.image %>" class="card-img-top mb-3" alt="...">
+    <p class="card-text ml-2"><small class="text-muted"><%= post.tags %> </small></p>
+    <p class="text-muted ml-2">Date Posted: <%= post.date.toDateString() %> </p>
+    <a class="btn btn-primary ml-2" href="/blogs/<%=post._id%>/edit">Edit</a>
+    <a class="btn btn-primary ml-2" href="/blogs">All Blogs</a>
+    <form class='ml-2 my-2' action="/blogs/<%= post._id%>?_method=DELETE" method="POST">
+    <button class="btn btn-danger">Delete Post</button>
+    </form>
+    </div>
+    <div class="col-md-8">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title%> </h5>
+      <p class="card-text"><%= post.content %></p>
+      
+    </div>
+  </div>
+  </div>
+</div>
+    
