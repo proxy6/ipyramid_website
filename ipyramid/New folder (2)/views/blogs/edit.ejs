@@ -1,0 +1,56 @@
+
+    <h2>Edit Blog Post</h2>
+    <% layout('layout/boilerplate') -%>
+    <form action="/blogs/<%=blog._id%>?_method=PUT" method="POST" class="needs-validation" novalidate>
+        <div class="row g-3">
+      <div class="col-md-6 ">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" name="title" value="<%= blog.title%>" required>
+        <div class="valid-feedback">
+            Good
+        </div>
+      </div>
+        <div class="col-md-6">
+        <label class="form-label" for="author">Author</label>
+        <input class="form-control" type="text" name="author" value="<%= blog.author%>" required>
+        <div class="valid-feedback">
+            Good
+        </div>
+        </div>
+    </div>
+      
+        
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label" for="image">Image url</label>
+                <input class="form-control" type="text" name="image" value="<%= blog.image%>" required>
+                <div class="valid-feedback">
+                    Good
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label" for="tags">Tags</label>
+                <input class="form-control" type="text" name="tags" value="<%= blog.tags%>" required>
+                <div class="valid-feedback">
+                    Good
+            </div>
+            </div>
+        </div>
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <label class="form-label" for="content">Content</label>
+            <textarea class="form-control" class="" name="content" id="" cols="700" rows="10" required><%= blog.content%></textarea>
+            <div class="valid-feedback">
+                Good
+            </div>
+        </div>
+      
+    </div>
+        <div class="col-12 mb-2">
+        <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+    </form>
+    <a class='btn btn-primary' href="/blogs">View all blogs</a>
+    
+      
+          

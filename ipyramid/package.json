@@ -1,0 +1,27 @@
+{
+  "name": "ipyramidtech",
+  "version": "1.0.0",
+  "description": "website for Tech company",
+  "main": "app.js",
+  "scripts": {
+    "nodemon": "app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "proxy",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.1.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.16",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.4.14",
+    "nodemailer-sendgrid": "^1.0.3",
+    "nodemon": "^2.0.6"
+  }
+}

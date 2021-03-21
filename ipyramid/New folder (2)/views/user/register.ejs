@@ -1,0 +1,30 @@
+<%-layout('layout/boilerplate') -%>
+<body>
+    <div class="container-fluid">
+                <form action="/user/register" class="login-form" method="POST">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter email" class="form-control" name="email">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" placeholder="Enter username" class="form-control" name="username">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter password" class="form-control" name="password">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="form-group my-3">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+                <div class="login-social">
+                    <p>Have an account?</p>
+                    <div><a href="/user/login">Sign in now!</a></div>
+                    
+                </div>
+            </div>
+</body>
